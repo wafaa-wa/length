@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #cdc1ff;
+    width: 100%;
+    position: relative;
+}
+.converter {
+    padding: 25px;
+    background-color: #b7e0ff;
+    border: 2px solid #b7e0ff;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgb(0,0,0,0.4);
+    text-align: center;
+    width: 50%;
+}
+.container .disappear {
+    position: absolute;
+    top: 70px;
+    margin: auto;
+    width:100%;
+    text-align: center;
+    height:fit-content;
+}
+.container .disappear span {
+    display: inline-block;
+    color:transparent;
+    text-shadow: 0px 0px 0px rgb(31, 29, 22);
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    font-size: 30px;
+    font-weight: bold;
+    color: #e78f81;
+}
+.container .disappear span:nth-child(1) {
+    animation-name: disappearleft;
+}
+.container .disappear span:nth-child(2) {
+    animation-name: disappearleft;
+    animation-delay: 1s;
+}
+@keyframes disappearleft{
+    50% {transform: skew(50deg) translateY(-200%);
+        text-shadow: 0px 0px 50px;
+          opacity: 0;
+    }
+  }
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+input {
+    font-size: 22px;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    background-color:#FFF5CD;
+    color: #a594f9;
+}
+#result-1 {
+    pointer-events: none;
+}
+span {
+    font-size: 30px;
+}
+.converter .unit {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+.unit select {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px;
+    background-color: #ffcfb3;
+}
+#inputCategory {
+    color: blue;
+}
+#resultCategory {
+    color: green;
+}
+.btn button {
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+.btn button:hover {
+     background-color: #ffcfb3;
+     color:#a594f9 ;
+}
+input::-webkit-inner-spin-button
+input::-webkit-outer-spin-button {
+    display:none;
+}
+@media (max-width:575px) {
+    .unit select , .input input , .btn button 
+     {
+        font-size:small;
+    }
+}
